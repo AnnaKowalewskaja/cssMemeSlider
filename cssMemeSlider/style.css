@@ -13,18 +13,110 @@ h1 {
 .wrapper {
     position: relative;
     margin: 0 auto;
-    height: 50rem;
-    background-color: rebeccapurple;
+    height: 30rem;
+  
+    width: 100%;
 }
 
 .slider {
-    height: 30rem;
-    
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .3);
+    margin: 0 auto;
 }
 
-.wrapper__radio{
+.wrapper__radio {
     margin: 0 auto;
     width: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.wrapper__radio>input {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+    
+    display: none;
+}
+
+.slides {
+    height: inherit;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    z-index: 0;
+    transform: scale(1.3);
+    transition: transform ease-in-out .6s, opacity ease-in-out .6s;
+}
+
+.slide1 {
+    background-image: url('./img/img1.jpeg');
+}
+
+.slide2 {
+    background-image: url('./img/img2.webp');
+}
+
+.slide3 {
+    background-image: url('./img/img3.avif');
+}
+
+.slide4 {
+    background-image: url('./img/img4.jpeg');
+}
+
+.slide5 {
+    background-image: url('./img/img5.jpeg');
+}
+
+.wrapper .controls {
+	left: 50%;
+	margin-left: -10rem;
+	position: absolute;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+    position: relative;
+	height: 1.6rem;
+    width: 1.6rem;
+	margin: 2rem 2rem 1rem 2rem;
+	border-radius: 50%;
+    left: -3rem;
+    transition: background ease-in-out .6s;
+}
+
+.wrapper label:after {
+	border: .1rem solid rgb(89, 89, 89);
+	content: " ";
+	display: block;
+	height: 1.5rem;
+    width: 1.5rem;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+	background: rgb(160, 160, 160);
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
 }
