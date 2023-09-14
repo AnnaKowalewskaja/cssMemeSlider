@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 3rem 7rem;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    height: 50rem;
+    background-color: rebeccapurple;
+}
+
+.slider {
+    height: 30rem;
+    
+}
+
+.wrapper__radio{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
