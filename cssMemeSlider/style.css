@@ -13,16 +13,16 @@ h1 {
 .wrapper {
     position: relative;
     margin: 0 auto;
-    height: 30rem;
+    height: 40rem;
 
-    width: 100%;
+    width: 50%;
 }
 
 .slider {
     height: 100%;
     overflow: hidden;
     position: relative;
-    width: 50%;
+    width: 100%;
     box-shadow: 0 0 2rem rgba(0, 0, 0, .3);
     margin: 0 auto;
 }
@@ -40,7 +40,6 @@ h1 {
     display: block;
     padding: 1rem;
     margin: 1rem;
-
     display: none;
 }
 
